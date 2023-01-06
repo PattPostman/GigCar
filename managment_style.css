@@ -1,0 +1,239 @@
+/*
+----------------------------
+managment.php
+----------------------------
+*/
+body{
+    font-family: "Lato", sans-serif;
+    margin: 0;
+    background: rgb(53, 53, 53);
+    background-image: url("zdjecia/main_bcg.jpg");
+    background-position: 50%;
+    background-repeat: no-repeat;
+}
+#main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+}
+@keyframes pop_up_animation_show{
+    0% { transform: scale(0); display: block;}
+    100% { transform: scale(1); }
+}
+@keyframes pop_up_animation_hide{
+    0% { transform: scale(1); }
+    60% { transform: scale(1.1); }
+    100% { transform: scale(0); display: none;}
+}
+.pop_up_show{
+    animation: pop_up_animation_show 0.6s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+.pop_up_hide{
+    animation: pop_up_animation_hide  0.6s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+#nav_managment{
+    display: flex;
+    align-items: center;
+    background-color: black;
+    height: 80px;
+    position: sticky;
+    top:0;
+    z-index: 1;
+    width: 100%;
+}
+#logo_managment{
+    height: 60px;
+    margin-left: 15px;
+}
+.select_win{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color:rgb(134, 239, 33);
+    border-left: 3px rgba(255, 255, 255, 0.705) solid;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.select_win:hover{
+    color: white;
+    font-size: 110%;
+    transition: 0.2s;
+}
+.select_win_js{
+    color: white;
+    font-size: 110%;
+    transition: 0.2s;
+}
+
+.log_out_but{
+    font-size: 100%;
+    width: 100%;
+    height: 100%;
+    margin-top: auto;
+    background-color: black;
+    color:rgb(134, 239, 33);
+    cursor: pointer;
+    font-family: "Lato", sans-serif;
+    transition: 0.2s;
+}
+.log_out_but:hover{
+    color: white;
+    font-size: 110%;
+    transition: 0.2s;
+}
+
+.background_of_element{
+    position: relative;
+    padding: 25px;
+    display:none;
+}
+.background_of_element::before{
+    border-radius: 15px;
+    content: "";
+    z-index: -1;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(0,0,0,0.6);
+}
+.add_new_car_rows{
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.input_text{
+    width: 120px;
+    border-radius: 5px;
+    padding: 2px;
+    transition: 0.2s;
+}
+.input_text:focus{
+    background-color: rgb(155, 240, 75);
+    transition: 0.2s;
+}
+
+.field_input_h3{
+    width: 33%;
+    margin: 10px;
+    text-align: center;
+}
+.input_submit{
+    margin: 20px;
+    padding: 15px 60px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.input_submit:hover{
+    background-color: rgb(134, 239, 33);
+    transition: 0.3s;
+}
+.delete-button{
+    display: flex;
+    justify-content: center;
+    border: 2px rgb(0, 0, 0) solid;
+    border-radius: 10px;
+    width: 154px;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: 0.3s;
+    background-color: red;
+}
+.delete-button:hover{
+    cursor: pointer;
+    box-shadow: 0px 0px 28px 3px red;
+    transition: 0.3s;
+}
+.delete-order{
+    display: flex;
+    justify-content: center;
+    border: 2px rgb(0, 0, 0) solid;
+    border-radius: 10px;
+    width: 100px;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: 0.3s;
+    background-color: red;
+}
+.delete-order:hover{
+    cursor: pointer;
+    box-shadow: 0px 0px 28px 3px red;
+    transition: 0.3s;
+}
+.card{
+    background-color: white;
+    color: black;
+    padding: 20px;
+    border: 1.5px rgba(0, 0, 0, 0.25) solid;
+    border-radius: 10px;
+    margin: 30px;
+    box-shadow: 8px 8px 24px 0px rgb(85, 85, 85);
+}
+#car_base{
+    display: none;
+    justify-content: center; 
+    flex-wrap: wrap; 
+    scroll-margin-top: 90px;
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-top: auto;
+    background: rgb(170,170,170);
+    background: linear-gradient(90deg, rgba(170,170,170,1) 0%, rgba(213,213,213,1) 45%, rgba(213,213,213,1) 55%, rgba(170,170,170,1) 100%);
+}
+.icon{
+    width: 50%;
+}
+#customer_base{
+    display: none;
+    justify-content: center; 
+    flex-wrap: wrap; 
+    scroll-margin-top: 90px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+.car-image{
+    width: 200px;
+}
+.customer-image{
+    width: 200px;
+    height: 200px;
+}
+#location_base{
+    color:white;
+    position: relative;
+    padding: 25px;
+    display:none;
+}
+#location_base::before{
+    border-radius: 15px;
+    content: "";
+    z-index: -1;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(0,0,0,0.6);
+}
+#check_orders{
+    display: none;
+    justify-content: center;
+    flex-wrap: wrap; 
+    scroll-margin-top: 90px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
