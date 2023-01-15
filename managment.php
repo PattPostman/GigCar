@@ -1,9 +1,6 @@
 <?php
     session_start();
-    //DEFINIOWANIE ZMIENNYCH JS
-    //echo'<script type="text/JavaScript">
-    //        nie_usunieto_auta = 0;
-    //    </script>';
+
     //SPRAWDZANIE LOGOWANIA DO ADMINA
     if(!isset($_SESSION['zalogowany']) OR $_SESSION['zalogowany'] == 0){
         header("Location: main.php");
