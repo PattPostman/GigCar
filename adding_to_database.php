@@ -1,5 +1,5 @@
 <?php
-    //DANE LOGOWANIA ('localhost','antek','1234','id20112617_baza_wypozyczalnii')
+    //DANE LOGOWANIA ('localhost','antek','1234','id20112617_baza_wypozyczalnii') 
 
     session_start();
     if(!isset($_POST)){

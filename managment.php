@@ -1,5 +1,5 @@
 <?php
-    session_start();
+    session_start(); 
 
     //SPRAWDZANIE LOGOWANIA DO ADMINA
     if(!isset($_SESSION['zalogowany']) OR $_SESSION['zalogowany'] == 0){
